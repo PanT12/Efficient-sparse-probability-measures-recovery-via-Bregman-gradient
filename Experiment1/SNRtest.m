@@ -9,9 +9,9 @@ RSNR = [];
 time = [];
 num = 100;
 for k = 1:num
-    load('SNR_new/50/A.mat'); % 
-    load(['SNR_new/50/b',num2str(k),'.mat'],'b'); % 
-    load(['SNR_new/50/x',num2str(k),'.mat'],'x_true'); % 
+    load('50/A.mat'); % 
+    load(['50/b',num2str(k),'.mat'],'b'); % 
+    load(['50/x',num2str(k),'.mat'],'x_true'); % 
     SNR = [SNR;10*log10(norm(A*x_true,2)^2/norm(b-A*x_true,2)^2)];
     numerator = numerator + norm(A*x_true,2)^2;
     denominator = denominator + norm(b - A*x_true,2)^2;
@@ -41,12 +41,12 @@ result = [SNR SNR_mean*ones(num,1) RSNR RSNR_mean*ones(num,1) time 2*ones(num,1)
 result = [result;mean(result)];
 colNames = {'SNR','SNR_mean','RSNR','RSNR_mean','time','lambda'};
 result = array2table(result,'RowNames',rowNames,'VariableNames',colNames)
-% writetable(result,'SNR_new/SNR50.txt') % 
+% writetable(result,'SNR50.txt') % 
 %%
 clear all;clc
-path = 'SNR_new/';
+% path = 'SNR_new/';
 namelist = dir([path,'*.txt']);
-RSNR = []; time = []; RSNR_his = []; time_his = [];
+RSNR = []; time = []; % RSNR_his = []; time_his = [];
 for i = 1:length(namelist)
     filename = [path,namelist(i).name];
     result = readtable(filename,VariableNamingRule='preserve');
@@ -64,7 +64,6 @@ mean_time_o = mean(time);
 std_time_o = std(time);
 % mean_time_h = mean(time_his);
 % std_time_h = std(time_his);
-% SNR15 = readtable('SNR_new/SNR15.txt')
 %%
 set(gcf, 'PaperSize', [25 25])
 % set(fig,'defaultAxesColorOrder',['black'; 'black']);
