@@ -10,7 +10,7 @@ The experiment demonstrates that our algorithm achieves high accuracy in a short
 
 ### Experiment 2 (support accuracy)
 This experiment is conducted to determine if the solution derived from our algorithm can accurately recover the true support of the ground truth. To evaluate the performance of the algorithm, we compute various metrics, including accuracy, precision, recall, and the F1 score. Detailed definition of these metrics are provided in the paper.
-The experiment shows that our algorithm achieves high accuracy, precision, recall and F1 value, indicating nearly perfect recovery. In addition, as the row dimension of matrix `$A$` increases, our algorithm demonstrates an increasingly remarkable capability to recover the ground truth vector. 
+The experiment shows that our algorithm achieves high accuracy, precision, recall and F1 value, indicating nearly perfect recovery. In addition, as the row dimension of matrix `A` increases, our algorithm demonstrates an increasingly remarkable capability to recover the ground truth vector. 
 
 ### Experiment 3 (efficacy of the L0BPG step)
 The final experiment indicates the efficacy of the L0BPG step in the algorithm. The algorithm would pick appropriate elements according to the sparsity penalty. Additionally, this experiment also highlights the minimal value control in the solution and the importance of achieving high accuracy during the initialization phase.
