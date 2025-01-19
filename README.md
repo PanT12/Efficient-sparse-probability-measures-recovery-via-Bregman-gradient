@@ -2,7 +2,7 @@
 The complete paper can be accessed at <https://arxiv.org/pdf/2403.02861.pdf/>. 
 
 ## Experiment Details
-In the experiments, we consider the least squares problem. 
+In the experiments, we consider synthetic data (Experiments 1-4) and real data (Experiments 5-6) . 
 
 ### Experiment 1 (recovery accuracy)
 In this experiment, we want to test the recovery accuracy of our algorithm. We maintain a constant signal-to-noise ratio (SNR) for data generation and compute the reconstruction SNR (RSNR) using the recovered solution.
@@ -13,7 +13,21 @@ This experiment is conducted to determine if the solution derived from our algor
 The experiment shows that our algorithm achieves high accuracy, precision, recall and F1 value, indicating nearly perfect recovery. In addition, as the row dimension of matrix `A` increases, our algorithm demonstrates an increasingly remarkable capability to recover the ground truth vector. 
 
 ### Experiment 3 (efficacy of the L0BPG step)
-The final experiment indicates the efficacy of the L0BPG step in the algorithm. The algorithm would pick appropriate elements according to the sparsity penalty. Additionally, this experiment also highlights the minimal value control in the solution and the importance of achieving high accuracy during the initialization phase.
+The experiment indicates the efficacy of the L0BPG step in the algorithm. The algorithm would pick appropriate elements according to the sparsity penalty. Additionally, this experiment also highlights the minimal value control in the solution and the importance of achieving high accuracy during the initialization phase.
+
+### Experiment 4 (Huber loss)
+We consider the Huber loss as the loss function by introducing Salt and Pepper Impulse noise. We also compare it with the quadratic loss using our algorithm.
+
+### Experiment 5 (hyperspectral unmixing)
+In this experiment, we focus on a well-known region of the Cuprite dataset and try to recover the unknown abundance matrix. The experiment indicates that the abundance matrix recovered by our algorithm shows a high high similarity to the Geological Reference Map. 
+
+### Experiment 6 (portfolio optimization)
+In this experiment, we consider the portfolio optimization and use a benchmark dataset from the OR-Library. 
 
 ## Code Files Description
-The data and code can be found under the sections "Experiment 1", "Experiment 2", and "Experiment 3" files. The results of the algorithm can be viewed in the "Results" file.
+The data can be found under the file "data" and the result can be found under the file "result".
+
+## Notes
+1. The SUnSAL algorithm is provided by Jose Bioucas Dias at <http://www.lx.it.pt/~bioucas/code.htm/>. 
+2. Some codes in Experiment 5 are provided in <https://github.com/ricardoborsoi/MUA_SparseUnmixing/tree/master/>.
+
