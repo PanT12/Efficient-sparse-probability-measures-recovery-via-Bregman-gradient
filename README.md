@@ -1,5 +1,5 @@
 # Efficient sparse probability measures recovery via Bregman gradient
-The complete paper can be accessed at <https://arxiv.org/pdf/2403.02861.pdf/>. 
+The complete paper can be accessed at <https://arxiv.org/pdf/2403.02861.pdf>. 
 
 ## Experiment Details
 In the experiments, we consider synthetic data (Experiments 1-4) and real data (Experiments 5-6) . 
@@ -28,6 +28,6 @@ In this experiment, we consider the portfolio optimization and use a benchmark d
 The data can be found under the file "data" and the result can be found under the file "result".
 
 ## Notes
-1. The SUnSAL algorithm is provided by Jose Bioucas Dias at <http://www.lx.it.pt/~bioucas/code.htm/>. 
-2. Some codes in Experiment 5 are provided in <https://github.com/ricardoborsoi/MUA_SparseUnmixing/tree/master/>.
+1. The SUnSAL algorithm is provided by Jose Bioucas Dias at <http://www.lx.it.pt/~bioucas/code.htm>. 
+2. Some codes in Experiment 5 are provided in <https://github.com/ricardoborsoi/MUA_SparseUnmixing/tree/master>.
 
