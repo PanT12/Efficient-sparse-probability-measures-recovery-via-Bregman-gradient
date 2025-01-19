@@ -29,5 +29,8 @@ The data can be found under the file "data" and the result can be found under th
 
 ## Notes
 1. The SUnSAL algorithm is provided by Jose Bioucas Dias at <http://www.lx.it.pt/~bioucas/code.htm>. 
-2. Some codes in Experiment 5 are provided in <https://github.com/ricardoborsoi/MUA_SparseUnmixing/tree/master>.
+2. Some codes in Experiment 5 are provided in <https://github.com/ricardoborsoi/MUA_SparseUnmixing/tree/master> [1].
+
+## Reference
+- [1] A Fast Multiscale Spatial Regularization for Sparse Hyperspectral Unmixing. R.A. Borsoi, T. Imbiriba, J.C.M. Bermudez, C. Richard. IEEE Geoscience and Remote Sensing Letters, 2018.
 
